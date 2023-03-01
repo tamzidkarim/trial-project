@@ -4,7 +4,7 @@ import { SECRET_KEY } from '@config';
 import { CreateUserDto } from '@dtos/users.dto';
 import { HttpException } from '@exceptions/HttpException';
 import { DataStoredInToken, TokenData } from '@interfaces/auth.interface';
-import { User } from '@interfaces/users.interface';
+import { User } from '@/interfaces/user.interface';
 import { UserModel as userModel } from '@/models';
 import { isEmpty } from '@utils/util';
 
