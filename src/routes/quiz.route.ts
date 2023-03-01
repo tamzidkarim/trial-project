@@ -15,7 +15,15 @@ class QuizRoute implements Routes {
   }
 
   private initializeRoutes() {
-    this.router.post(`${this.path}/`, this.quizController.getAllQuiz);
+    this.router.get(`${this.path}/`, this.quizController.getAllQuiz);
+    this.router.get(`${this.path}/:id`, this.quizController.editQuiz);
+    this.router.post(`${this.path}/`, this.quizController.createQuiz);
+    this.router.put(`${this.path}/:id`, this.quizController.editQuiz);
+    this.router.post(`${this.path}/:id/question`, this.quizController.addQuestion);
+    this.router.put(`${this.path}/:quizId/question/:questionId`, this.quizController.editQuestion);
+    this.router.delete(`${this.path}/:quizId/question/:questionId`, this.quizController.deleteQuestion);
+    this.router.post(`${this.path}/:quizId/result`, this.quizController.generateResult);
+    this.router.delete(`${this.path}/:id`, this.quizController.deleteQuiz);
   }
 }
 

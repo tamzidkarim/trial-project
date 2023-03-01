@@ -1,8 +1,9 @@
 import { HttpResponse } from '@/interfaces/response.interface';
 import { Response } from 'express';
+import { StatusCodes } from 'http-status-codes';
 
 export class HttpCommonResponse {
-  constructor(res: Response, data: any, success: boolean, httpStatus = 200, errors: string[] | null = null) {
+  constructor(res: Response, data: any, success = true, httpStatus = StatusCodes.OK, errors: string[] | null = null) {
     const responseData: HttpResponse = {
       success: success,
       errors: errors,

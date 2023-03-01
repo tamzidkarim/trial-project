@@ -4,7 +4,7 @@ import { CreateUserDto } from '@dtos/users.dto';
 import { Routes } from '@interfaces/routes.interface';
 import validationMiddleware from '@middlewares/validation.middleware';
 
-class UsersRoute implements Routes {
+class UserRoute implements Routes {
   public path = '/users';
   public router = Router();
   public usersController = new UsersController();
@@ -22,4 +22,4 @@ class UsersRoute implements Routes {
   }
 }
 
-export default UsersRoute;
+export default UserRoute;

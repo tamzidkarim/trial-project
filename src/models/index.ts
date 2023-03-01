@@ -6,3 +6,5 @@ import { Question } from './question.model';
 export const UserModel = getModelForClass(User);
 export const QuizModel = getModelForClass(Quiz);
 export const QuestionModel = getModelForClass(Question);
+
+export { User, Quiz, Question };
