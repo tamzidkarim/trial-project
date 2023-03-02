@@ -26,7 +26,7 @@ module.exports = {
       },
     },
     {
-      name: 'dev', // pm2 start App name
+      name: 'trial-dev', // pm2 start App name
       script: 'ts-node', // ts-node
       args: '-r tsconfig-paths/register --transpile-only src/server.ts', // ts-node args
       exec_mode: 'cluster', // 'cluster' or 'fork'
@@ -41,7 +41,7 @@ module.exports = {
       error: './logs/error.log', // pm2 error log file
       env: {
         // environment variable
-        PORT: 3000,
+        PORT: 4000,
         NODE_ENV: 'development',
       },
     },
